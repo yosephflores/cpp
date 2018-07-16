@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
 		cout << "Ingrese su password: ";
 		cin >> password;
 		
-		if (password == "admin"||password == "hola") {
+		if (password == "admin"||password == "123") {
 			acceso = true;
 		}						
 	}
@@ -28,10 +28,10 @@ int main(int argc, char* argv[]) {
 	system("CLS");
 	
 	
-	int  Pasivo=0,  Patrimonio=0;
+	int  Pasivo=0,  Patrimonio=0,ntransaciones=0;
     int tActivo=0, tPasivo=0,  tPatrimonio=0;
-    int a, b , c , d, f, g;
-	
+    int a=0, b=0 , c=0 , d=0, f=0, g=0;
+	 int aa=0, bb=0 , cc=0 , dd=0, ff=0, gg=0;
 	
 
 
@@ -75,12 +75,15 @@ bool reconosermas = true;
 				cout << "Ingrese el valor de la transaccion.....";
 			cin >> a;
 				tActivo = Activo+ a;
+				
 				cout <<  "Efectivo-y-equivalentes-al-efectivo.....\n";
+				ntransaciones=aa++;
 				nreconocimientos++;
 				break;
 				case 2:
 				cout << "Bancos.....................................";
 			cin >> b;
+			ntransaciones=bb++;
 				tActivo = Activo+ b;
 				cout << "Mercancías.............................\n";
 				nreconocimientos++;
@@ -88,6 +91,7 @@ bool reconosermas = true;
 				case 3:
 				cout << "Ingrese el valor de la transaccion.....";
 			cin >> c;
+			ntransaciones=cc++;
 				tActivo = Activo+ c;
 				cout <<  "Mercancías.............................\n";
 				nreconocimientos++;
@@ -95,7 +99,7 @@ bool reconosermas = true;
 				case 4:
 				cout << "Clientes.............................";
 			cin >> d;
-			
+			ntransaciones=dd++;
 				tActivo = Activo+ d;
 				cout <<  "Clientes..................................\n";
 				nreconocimientos++;
@@ -103,6 +107,7 @@ bool reconosermas = true;
 				case 5:
 				cout << "Ingrese el valor de la transaccion.....";
 			cin >> f;
+			ntransaciones=ff++;
 				tActivo = Activo+ f;
 				cout <<  "Documentos por cobrar........\n";
 				nreconocimientos++;
@@ -110,6 +115,7 @@ bool reconosermas = true;
 				case 6:
 				cout << "Ingrese el valor de la transaccion.....\n";
 			cin >> g;
+			ntransaciones=gg++;
 				tActivo = Activo+ g;
 				cout << "Deudores diversos...........................\n";
 				nreconocimientos++;
@@ -126,9 +132,31 @@ bool reconosermas = true;
 				break;
 		}
 	
-	
+	 system("CLS");
 	
 	}
+	
+	
+	cout << "Total Transacciones del Activo" << endl;
+	cout << "-------------------------" << endl;
+	cout << "-------------------------" << endl;
+	
+	
+		ntransaciones=aa+ bb + cc + dd+ ff+ gg;
+	
+	
+	
+
+	cout << "Total num transaciones " << ntransaciones<< endl;
+	
+	tActivo=a+ b + c + d+ f+ g; 
+	cout << "Total Activo..: L " << tActivo << endl;
+	
+	
+	
+	
+	
+	
 	bool salir = false;
 	
 	while(salir == false) {
@@ -147,3 +175,4 @@ bool reconosermas = true;
 	
 
 }
+
