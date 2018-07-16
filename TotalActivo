@@ -1,0 +1,115 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+	system("cls");
+	
+	cout << "Cuentas del activo " << endl;
+	cout << endl;
+	cout << endl;
+	
+	int Activo=0, Pasivo=0,  Patrimonio=0, nreconocimientos, reconosermas;
+    int tActivo=0, tPasivo=0,  tPatrimonio=0;
+    int a, b , c , d, f, g;
+
+	while(reconosermas == true) {
+		int opcion;
+		
+		cout << "Seleccione un No de cuenta para agregar al libro diario" << endl;	
+		cout << "---------------------------------------------------------------" << endl;
+		            cout << "Cuentas de Activo:" << endl;
+		cout << "1 - Efectivo-y-equivalentes-al-efectivo ......." << endl;
+		cout << "2 - Bancos......." << endl;
+		cout << "3 - Mercancías............." << endl;
+		cout << "4 - Clientes.." << endl;
+		cout << "5 - Documentos por cobrar.." << endl;
+		cout << "6 - Deudores diversos.." << endl;
+		
+		
+		cout << "---------------------------------------------------------------" << endl;
+		cout << "0 - Salir" << endl;
+	cout << "---------------------------------------------------------------" << endl;
+		cout << endl;
+		cout << endl;
+	
+		cout << endl;
+		cout << endl;				
+		cout << "Ingrese un numero del menu --> ";
+		cin >> opcion;
+	
+	
+	
+	switch(opcion) {
+			case 0: 
+				reconosermas = false;				
+				break;
+			case 1:
+				cout << "Ingrese el valor de la transaccion.....";
+			cin >> a;
+				tActivo = Activo+ a;
+				cout <<  "Efectivo-y-equivalentes-al-efectivo.....\n";
+				nreconocimientos++;
+				break;
+				case 2:
+				cout << "Bancos.....................................";
+			cin >> b;
+				tActivo = Activo+ b;
+				cout << "Mercancías.............................\n";
+				nreconocimientos++;
+				break;
+				case 3:
+				cout << "Ingrese el valor de la transaccion.....";
+			cin >> c;
+				tActivo = Activo+ c;
+				cout <<  "Mercancías.............................\n";
+				nreconocimientos++;
+				break;
+				case 4:
+				cout << "Clientes.............................";
+			cin >> d;
+			
+				tActivo = Activo+ d;
+				cout <<  "Clientes..................................\n";
+				nreconocimientos++;
+				break;	
+				case 5:
+				cout << "Ingrese el valor de la transaccion.....";
+			cin >> f;
+				tActivo = Activo+ f;
+				cout <<  "Documentos por cobrar........\n";
+				nreconocimientos++;
+				break;
+				case 6:
+				cout << "Ingrese el valor de la transaccion.....\n";
+			cin >> g;
+				tActivo = Activo+ g;
+				cout << "Deudores diversos...........................\n";
+				nreconocimientos++;
+				break;
+							
+			default: 
+		
+			if (opcion >=8)
+					nreconocimientos = true;
+					cout << "Opcion de menu invalida" << endl;
+						system("PAUSE");
+						continue;
+					
+				break;
+		}
+	
+	}
+	
+	
+	bool salir = false;
+	
+	while(salir == false) {
+		string opcion;
+		cout << "presione 'S' mas enter para salir de esta pantalla" << endl;	
+		cin >> opcion;
+		
+		if (opcion == "S" || opcion == "s") {
+			salir = true;
+		}
+	}
+}
