@@ -1,0 +1,209 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+int main(int argc, char* argv[]) {	
+			
+    cout << endl;
+    cout << endl;
+    	
+	string password;
+	bool acceso = false;
+	
+	while (acceso == false) {		
+		cout << "ERES USUARIO; ";
+		cin >> password;
+		
+		if (password == "SI"||password == "si") {
+			acceso = true;
+		}						
+	}
+	
+	
+	system("CLS");
+	
+	
+	int  tEstadoReultado,Pasivo=0,  ntransaciones=0;
+    int tActivo=0, tPasivo=0,  tPatrimonio=0;
+    int a=0, b=0 , c=0 , d=0, f=0, g=0;
+    int H =0, I=0, J=0, K=0, M=0, N=0,  O=0, P=0;
+	 int aa=0, bb=0 , cc=0 , dd=0, ff=0, gg=0;
+	
+
+
+float EstadoReultado = 0;
+	int nreconocimientos;
+	
+bool reconosermas = true;
+
+	while(reconosermas == true) {
+		int opcion;
+		
+		cout << "Seleccione un No de cuenta para agregar al libro diario" << endl;	
+		cout << "---------------------------------------------------------------" << endl;
+		            cout << "Cuentas de Estado De Resultado:" << endl;
+		cout << "1 - Ventas......................................" << endl;
+		cout << "2 - Coste de ventas............................." << endl;
+		cout << "3 - Utilidad bruta.............................." << endl;
+		cout << "4 - Gastos de operación........................." << endl;
+		cout << "5 - Utilidad sobre flujo (EBITDA)..............." << endl;
+		cout << "6 - Depreciaciones y amortizaciones............." << endl;
+		cout << "7 - Utilidad operativa.........................." << endl;
+		cout << "8 - Gastos y productos financieros.............." << endl;
+		cout << "9 - Utilidad antes de impuestos................." << endl;
+		cout << "10 - Impuestos.................................." << endl;
+		cout << "11 - UUtilidad neta............................." << endl;
+		
+		cout << "---------------------------------------------------------------" << endl;
+		cout << "0 - Salir" << endl;
+	cout << "---------------------------------------------------------------" << endl;
+		cout << endl;
+		cout << endl;
+	
+		cout << endl;
+		cout << endl;				
+		cout << "Ingrese un numero del menu --> ";
+		cin >> opcion;
+	
+	
+	
+	switch(opcion) {
+			case 0: 
+				reconosermas = false;				
+				break;
+			case 1:
+				cout << "Ingrese el valor de la transaccion...........";
+			cin >> a;
+				tEstadoReultado = EstadoReultado+ a;
+				
+				cout <<  "Ventas....................................\n";
+				ntransaciones=aa++;
+				nreconocimientos++;
+				break;
+				case 2:
+				cout << "Ingrese el valor de la transaccion...........";
+			cin >> b;
+			
+			
+			ntransaciones=bb++;
+				tEstadoReultado = EstadoReultado- b;
+				cout << "Coste de ventas............................\n";
+				nreconocimientos++;
+				break;
+				case 3:
+				cout << "Ingrese el valor de la transaccion...........";
+			cin >> c;
+			ntransaciones=cc++;
+			c=a-b
+				tEstadoReultado = EstadoReultado+ c;
+				
+				cout <<  "Utilidad bruta............................\n";
+				nreconocimientos++;
+				break;
+				case 4:
+				cout << "Ingrese el valor de la transaccion...........";
+			cin >> d;
+			ntransaciones=dd++;
+				tEstadoReultado = EstadoReultado+ d;
+				cout <<  "Gastos de operación.......................\n";
+				nreconocimientos++;
+				break;	
+				case 5:
+				cout << "Ingrese el valor de la transaccion...........";
+			cin >> f;
+			ntransaciones=ff++;
+				tEstadoReultado = EstadoReultado+ f;
+				cout <<  "Utilidad sobre flujo (EBITDA).............\n";
+				nreconocimientos++;
+				break;
+				case 6:
+				cout << "Ingrese el valor de la transaccion.........\n";
+			cin >> g;
+			ntransaciones=gg++;
+				tEstadoReultado = EstadoReultado- g;
+				cout << "Depreciaciones y amortizaciones............\n";
+				
+				
+				case 7:
+				cout << "Ingrese el valor de la transaccion...........";
+			cin >> 	H;
+		
+			
+			ntransaciones=bb++;
+				tEstadoReultado = EstadoReultado- H;
+				cout << "Coste de ventas............................\n";
+				nreconocimientos++;
+				break;
+				case 8:
+				cout << "Ingrese el valor de la transaccion...........";
+			cin >> c;
+			ntransaciones=cc++;
+			c=a-b
+				tEstadoReultado = EstadoReultado- c;
+				
+				cout <<  "Gastos y productos financieros............\n";
+				nreconocimientos++;
+				break;
+				case 9:
+				cout << "Ingrese el valor de la transaccion...........";
+			cin >> d;
+			ntransaciones=dd++;
+				tEstadoReultado = EstadoReultado+ d;
+				cout <<  "Utilidad antes de impuestos...............\n";
+				nreconocimientos++;
+				break;	
+				case 10:
+				cout << "Ingrese el valor de la transaccion...........";
+			cin >> f;
+			ntransaciones=ff++;
+				tEstadoReultado = EstadoReultado+ f;
+				cout <<  "Impuestos.................................\n";
+				nreconocimientos++;
+				break;
+				case 11:
+				cout << "Ingrese el valor de la transaccion.........\n";
+			cin >> g;
+			ntransaciones=gg++;
+				tEstadoReultado = EstadoReultado+ g;
+				cout << "DUtilidad neta.............................\n";
+					
+				
+				
+				
+				nreconocimientos++;
+				break;
+							
+			default: 
+		
+			if (opcion >=12)
+					nreconocimientos = true;
+					cout << "Opcion de menu invalida" << endl;
+						system("PAUSE");
+						continue;
+					
+				break;
+		}
+	
+	 system("CLS");
+	
+	}
+	cout << "Total Transacciones del Patrimonio" << endl;
+	cout << "-------------------------" << endl;
+	cout << "-------------------------" << endl;
+		ntransaciones=aa+ bb + cc + dd+ ff+ gg;
+	cout << "Total N# Transaciones " << ntransaciones<< endl;
+	tPatrimonio=a+ b + c + d+ f+ g; 
+	cout << "Total Patrimonio..: L " << tPatrimonio << endl;	
+	bool salir = false;
+	
+	while(salir == false) {
+		string opcion;
+		cout << "presione 'S' mas enter para salir de esta pantalla" << endl;	
+		cin >> opcion;
+		
+		if (opcion == "S" || opcion == "s") {
+			salir = true;
+		}
+	}
+}
